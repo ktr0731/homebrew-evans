@@ -5,20 +5,20 @@
 class Evans < Formula
   desc "Evans: more expressive universal gRPC client"
   homepage "https://evans.syfm.me"
-  version "0.10.10"
+  version "0.10.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_darwin_amd64.tar.gz"
-      sha256 "08c9e0bfbeecb871a36a4f9d9d536f2a5f92e17f345caf3251b54a313cca85ae"
+      url "http://github.com/ktr0731/evans/releases/download/v0.10.11/evans_darwin_amd64.tar.gz"
+      sha256 "4f687cf3497cabc6f68d40cf8e4f9819cda109aa3c3d8ca992ce4f3c082f0f54"
 
       def install
         bin.install "evans"
       end
     end
     if Hardware::CPU.arm?
-      url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_darwin_arm64.tar.gz"
-      sha256 "fb688b433e009be735a8f9428fb162fe07157471b698f4c92d507a09fa46d6fb"
+      url "http://github.com/ktr0731/evans/releases/download/v0.10.11/evans_darwin_arm64.tar.gz"
+      sha256 "c3d29409b1b4dbc86960a737f24f6acdc12bf175ea428dba24d59e1a10e5bcf9"
 
       def install
         bin.install "evans"
@@ -28,24 +28,24 @@ class Evans < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_linux_arm.tar.gz"
-      sha256 "6e86bd4dd7971724902cdb69a90f8584aaa28be52d682a52e7d840fd8db56aa0"
+      url "http://github.com/ktr0731/evans/releases/download/v0.10.11/evans_linux_arm.tar.gz"
+      sha256 "d261804382e40d1cd55a8ff2bb3a0fcc04e2d85714029be9e6fd43da95cd311a"
 
       def install
         bin.install "evans"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_linux_arm64.tar.gz"
-      sha256 "fd9d2ccd861fc55330987b10ad18c988dbd78b78b78ec7e273391471999005b8"
+      url "http://github.com/ktr0731/evans/releases/download/v0.10.11/evans_linux_arm64.tar.gz"
+      sha256 "fb90b5eefd300dc63ca768930db074b24df61d8b878c2c5997d6c912c0953cbd"
 
       def install
         bin.install "evans"
       end
     end
     if Hardware::CPU.intel?
-      url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_linux_amd64.tar.gz"
-      sha256 "b1160dcd9e4aa35d891ae956dba3daf57a74aabeacfa1b3019d50e67afadb5bf"
+      url "http://github.com/ktr0731/evans/releases/download/v0.10.11/evans_linux_amd64.tar.gz"
+      sha256 "0535a4161c6d5b9ff5dbe144e6b9e1c95f41b3078c993d1f04fcf0b699e997e6"
 
       def install
         bin.install "evans"
