@@ -10,7 +10,15 @@ class Evans < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_darwin_amd64.tar.gz"
-      sha256 "6eb8ad10b3e7f320939aeeb04bbddfc79d3c1329b85441d7d7f9161e5afe20d3"
+      sha256 "08c9e0bfbeecb871a36a4f9d9d536f2a5f92e17f345caf3251b54a313cca85ae"
+
+      def install
+        bin.install "evans"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_darwin_arm64.tar.gz"
+      sha256 "fb688b433e009be735a8f9428fb162fe07157471b698f4c92d507a09fa46d6fb"
 
       def install
         bin.install "evans"
@@ -21,7 +29,7 @@ class Evans < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_linux_arm.tar.gz"
-      sha256 "70346b95bb040eef6abbec02bb3666bbb95d082dd3492766702f9cc2b791be1e"
+      sha256 "6e86bd4dd7971724902cdb69a90f8584aaa28be52d682a52e7d840fd8db56aa0"
 
       def install
         bin.install "evans"
@@ -29,7 +37,7 @@ class Evans < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_linux_arm64.tar.gz"
-      sha256 "2bd9a87963276694d2c4c3685e581293a5e01896d36e89ce417f95fdae674edd"
+      sha256 "fd9d2ccd861fc55330987b10ad18c988dbd78b78b78ec7e273391471999005b8"
 
       def install
         bin.install "evans"
@@ -37,7 +45,7 @@ class Evans < Formula
     end
     if Hardware::CPU.intel?
       url "http://github.com/ktr0731/evans/releases/download/v0.10.10/evans_linux_amd64.tar.gz"
-      sha256 "c0ab07b5ee56117b5a4ead96e1d1ea670f0e4062a7b80121ab222837a86720b3"
+      sha256 "b1160dcd9e4aa35d891ae956dba3daf57a74aabeacfa1b3019d50e67afadb5bf"
 
       def install
         bin.install "evans"
